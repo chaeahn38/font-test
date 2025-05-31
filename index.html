@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chae Typefaces</title>
+  <link rel="stylesheet" href="/style2.css">
+</head>
+<body>
+
+    <div class="font-preview" data-font="Latitude">
+        <div class="control-bar">
+          <span class="font-name">Latitude</span>
+          <div class="slider-wrapper">
+            <input type="range" class="font-size-slider" min="50" max="400" value="270">
+            <span class="font-size-value">270px</span>
+          </div>
+          <span class="buy-font">Buy</span>
+        </div>
+        <div class="preview-text" contenteditable="true" style="font-family: 'Latitude'; font-size: 270px;">
+          Latitude
+        </div>
+      </div>
+      
+      <div class="font-preview" data-font="Totem">
+        <div class="control-bar">
+          <span class="font-name">Totem</span>
+          <div class="slider-wrapper">
+            <input type="range" class="font-size-slider" min="10" max="300" value="160">
+            <span class="font-size-value">160px</span>
+          </div>
+          <span class="buy-font">Buy</span>
+        </div>
+        <div class="preview-text" contenteditable="true" style="font-family: 'Totem'; font-size: 160px;">
+          Totem 토템
+        </div>
+      </div>
+      
+      <div class="font-preview" data-font="Root">
+        <div class="control-bar">
+          <span class="font-name">Root</span>
+          <div class="slider-wrapper">
+            <input type="range" class="font-size-slider" min="10" max="500" value="320">
+            <span class="font-size-value">320px</span>
+          </div>
+          <span class="buy-font">Buy</span>
+        </div>
+        <div class="preview-text" contenteditable="true" style="font-family: 'Root'; font-size: 320px;">
+          Root
+        </div>
+      </div>
+
+      <div class="font-preview" data-font="Helium">
+        <div class="control-bar">
+          <span class="font-name">Helium</span>
+          <div class="slider-wrapper">
+            <input type="range" class="font-size-slider" min="10" max="500" value="300">
+            <span class="font-size-value">300px</span>
+          </div>
+          <span class="buy-font">Buy</span>
+        </div>
+        <div class="preview-text" contenteditable="true" style="font-family: 'Helium'; font-size: 300px;">
+          Helium
+        </div>
+      </div>
+
+      <div class="font-preview" data-font="Trima">
+        <div class="control-bar">
+          <span class="font-name">Trima</span>
+          <div class="slider-wrapper">
+            <input type="range" class="font-size-slider" min="10" max="400" value="300">
+            <span class="font-size-value">300px</span>
+          </div>
+          <span class="buy-font">Buy</span>
+        </div>
+        <div class="preview-text" contenteditable="true" style="font-family: 'Trima'; font-size: 300px;">
+          Trima
+        </div>
+      </div>
+
+      <div class="font-preview" data-font="Tura Sans">
+        <div class="control-bar">
+          <span class="font-name">Tura Sans</span>
+          <div class="slider-wrapper">
+            <input type="range" class="font-size-slider" min="10" max="400" value="80">
+            <span class="font-size-value">80px</span>
+          </div>
+          <span class="buy-font">Buy</span>
+        </div>
+        <div class="preview-text" contenteditable="true" style="font-family: 'Tura Sans'; font-size: 280px;">
+          Tura 투라
+        </div>
+      </div>
+
+      <div class="font-preview" data-font="Aiden">
+        <div class="control-bar">
+          <span class="font-name">Aiden</span>
+          <div class="slider-wrapper">
+            <input type="range" class="font-size-slider" min="10" max="400" value="250">
+            <span class="font-size-value">250px</span>
+          </div>
+          <span class="buy-font">Buy</span>
+        </div>
+        <div class="preview-text" contenteditable="true" style="font-family: 'Aiden'; font-size: 250px;">
+          Aiden 에이든
+        </div>
+      </div>
+
+  
+
+  <script>
+  document.querySelectorAll('.font-preview').forEach(preview => {
+    const slider = preview.querySelector('.font-size-slider');
+    const valueDisplay = preview.querySelector('.font-size-value');
+    const text = preview.querySelector('.preview-text');
+
+    slider.addEventListener('input', () => {
+      const size = `${slider.value}px`;
+      valueDisplay.textContent = size;
+      text.style.fontSize = size;
+    });
+  });
+
+  </script>
+
+</body>
+</html>

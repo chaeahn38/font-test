@@ -1,0 +1,120 @@
+/* 1. Font-face 정의 */
+@font-face {
+  font-family: 'Latitude';
+  src: url('/fonts/Latitude-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Totem';
+  src: url('/fonts/Totem-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Root';
+  src: url('/fonts/Root-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Helium';
+  src: url('/fonts/Helium-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Trima';
+  src: url('/fonts/Trima-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Tura Sans';
+  src: url('/fonts/TuraSans-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Aiden';
+  src: url('/fonts/Aiden-Regular.otf') format('opentype');
+}
+
+/* 2. Layout + Styling */
+.control-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+.control-bar .font-name {
+  flex: 1;
+  text-align: left;
+  cursor: default;
+}
+
+.control-bar .slider-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.control-bar .buy-font {
+  flex: 1;
+  text-align: right;
+  opacity: 30%;
+}
+
+.control-bar .buy-font:hover {
+  color: blue;
+  font-weight: 600;
+  cursor: not-allowed;
+}
+
+.font-size-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  height: .5rem;
+}
+
+.font-size-slider::-webkit-slider-runnable-track {
+  height: 0.1rem;
+  background-color: lightgrey;
+  border-radius: 0.1rem;
+}
+
+.font-size-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: .8rem;
+  height: .8rem;
+  background-color: grey;
+  border: none;
+  border-radius: 50%;
+  margin-top: -0.3rem;
+}
+
+.preview-text {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  padding: .1em;
+  line-height: 1;
+  word-break: break-word;
+  background-color: #fff;
+  transition: background-color 0.3s;
+  border: none;
+  outline: none;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.preview-text:focus {
+  background-color: #fff;
+  outline: none;
+}
+
+.font-preview[data-font="Totem"] .preview-text {
+  padding: 0.5em 0;
+}
